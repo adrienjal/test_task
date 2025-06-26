@@ -1,0 +1,635 @@
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #111;
+    background-color: #fff;
+    padding: 60px;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+
+  .summary-block {
+    margin-bottom: 50px;
+    padding-left: 15px;
+  }
+
+  .page-title {
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #111;
+    margin: 80px 0 40px;
+    padding-bottom: 12px;
+  }
+
+  .main-title {
+    font-size: 50px;
+    font-weight: 800;
+    color: #111;
+    margin: 80px 0 30px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #444;
+    letter-spacing: 0.5px;
+  }
+
+  .section-title {
+    font-size: 34px;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    padding-bottom: 5px;
+    text-decoration: underline;
+  }
+
+  .block-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    margin: 50px 0 30px;
+    padding-bottom: 6px;
+    letter-spacing: 0.6px;
+    text-decoration: underline;
+  }
+
+  .subblock-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 30px 0 12px;
+    text-decoration: underline;
+  }
+
+  .subsection {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 25px;
+  }
+
+  .metric-line {
+    font-size: 22px;
+    margin: 10px 0 10px 20px;
+  }
+</style>
+
+    
+<div class="page-title">Submissions Empirical Moments</div>
+
+<div class="main-title">1 Background Information</div>
+<div class="summary-block">
+
+
+<div class="block-title">1.1 Background on the Housing Element in San José</div>
+<div class="summary-block">
+  <div class="metric-line">• The Housing Element is a state-mandated plan that jurisdictions in California must update every eight years to outline how they will accommodate future housing needs.</div>
+  <div class="metric-line">• For the 6th Housing Element cycle (2023–2031), local governments in the Bay Area were required to submit a compliant Housing Element to the California Department of Housing and Community Development (HCD) by <strong>January 31, 2023</strong>.</div>
+  <div class="metric-line">• San José adopted its Housing Element on <strong>June 20, 2023</strong>, after making revisions based on feedback from HCD.</div>
+  <div class="metric-line">• HCD certified the Housing Element as compliant on <strong>January 29, 2024</strong>.</div>
+  <div class="metric-line">• As a result, San José was subject to the <strong>Builder’s Remedy</strong> from <strong>February 1, 2023</strong> to <strong>January 29, 2024</strong>, a total of <strong>363 days</strong>.</div>
+  <div class="metric-line">• During this period, developers could submit Builder’s Remedy applications bypassing local zoning standards if the project included at least <strong>20% affordable units</strong>, as required by state law.</div>
+</div>
+
+
+<div class="block-title"> 1.2 Background Information: Builder’s Remedy Data & Matching Strategy</div>
+<div class="summary-block">
+
+  <div class="subblock-title">1.2.1 Summary</div>
+  <li><strong>34</strong> Builder’s Remedy (BR) projects identified in San José.</li>
+  <li><strong>20</strong> matched with traditional projects, using two criteria:
+    <ul>
+      <li><strong>Distance under 100 m</strong></li>
+      <li><strong>Total number of units between 80 percent and 120 percent of the BR project.</strong></li>
+    </ul>
+  </li>
+  <li>Of these 20 matches:
+    <ul>
+      <li><strong>19 have a submission date difference under 5 days</strong></li>
+      <li><strong>1 has a difference of 198 days</strong></li>
+    </ul>
+  </li>
+  <li>Among the <strong>19</strong> matched projects with a submission date difference under 5 days, <strong>14</strong> are composed entirely of above moderate income units in the traditional submissions dataset, which seems <strong>inconsistent with their expected BR status.</strong></li>
+
+  <div class="subblock-title"> 1.2.2 Dataset Update</div>
+  <li>HCD recently released the 2024 submissions for San José, which were not available when the dataset was first published on April 1. I have updated the dataset and the matching to automatically incorporate these new entries, for both San José and the rest of the Bay Area.</li>
+
+  <div class="subblock-title"> 1.2.3 Matching Results</div>
+
+  <div class="subsection"> 1.2.3.1 Bay Area</div>
+  <ul>
+    <li>BR Projects Detected: 44.64 % (50 / 112)</li>
+    <li>Affordable Units Detected: 61.32 % (2,803 / 4,571)</li>
+    <li>Total Units Detected: 58.25 % (10,840 / 18,608)</li>
+  </ul>
+
+  <div class="subsection">1.2.3.2 San José</div>
+  <ul>
+    <li>BR Projects Detected: 58.82 % (20 / 34)</li>
+    <li>Affordable Units Detected: 71.15 % (1,344 / 1,889)</li>
+    <li>Total Units Detected: 65.19 % (3,567 / 5,472)</li>
+  </ul>
+</div>
+
+
+<div class="main-title">
+  2. Inclusionary Housing in San José: Summary of Project Characteristics and Affordability Compliance
+</div>
+
+<div class="summary-block">
+
+  <div class="block-title"> 2.1 Explanation of Terms and Assumptions</div>
+  
+<div class="summary-block">
+  <div class="metric-line">This analysis uses two categories of affordability rules, based on publicly available information from the City of San José:</div>
+  <div class="metric-line">• <strong>Simplified Rule</strong>: Based on guidance from San José’s official housing website</div>
+  <div class="metric-line">• <strong>Strict Rule</strong>: Based on the San José Municipal Code</div>
+
+  <div class="subblock-title"> 2.1.1 Amendment Context</div>
+  <div class="metric-line">• Pre-Amendment Projects: submitted before March 2, 2021</div>
+  <div class="metric-line">  - Subject to affordability requirements if the project includes more than 20 units</div>
+  <div class="metric-line">• Post-Amendment Projects: submitted on or after March 2, 2021</div>
+  <div class="metric-line">  - Subject to affordability requirements if the project includes more than 10 units</div>
+
+  <div class="subblock-title"> 2.1.2 Simplified Rule (Applies to Pre- and Post-Amendment Projects)</div>
+  <div class="metric-line">A project satisfies the requirement if it meets one of the following:</div>
+  <div class="metric-line"><u>Owner-Occupied Projects</u>:</div>
+  <div class="metric-line">• At least 15% of total units are affordable</div>
+  <div class="metric-line"><u>Renter-Occupied Projects</u>:</div>
+  <div class="metric-line">• At least 15% of total units are affordable, or</div>
+  <div class="metric-line">• At least 10% of units are affordable to very low-income households</div>
+
+  <div class="subblock-title"> 2.1.3 Strict Rule (Applies Only to Post-Amendment Projects)</div>
+  <div class="metric-line">A project satisfies the requirement if it meets one of the following:</div>
+  <div class="metric-line"><u>Owner-Occupied Projects</u>:</div>
+  <div class="metric-line">• At least 15% of total units are affordable</div>
+  <div class="metric-line"><u>Renter-Occupied Projects</u>:</div>
+  <div class="metric-line">• 5% of units are affordable to each of: very low-, low-, and moderate-income households, or</div>
+  <div class="metric-line">• 10% of units are affordable to very low-income households</div>
+</div>
+
+<div class="subblock-title">2.1.4 Exemptions and Alternatives to On-Site Compliance</div>
+<div class="metric-line">
+  However, developers can get around these on-site rules using several alternative strategies. Here are a few examples:
+</div>
+<div class="metric-line">
+  <u>In-Lieu Fee</u>: Developers can pay a fee to the city instead of building the units. This fee is allocated to a dedicated fund used by the city to finance other affordable housing projects.
+</div>
+<div class="metric-line">
+  <u>Off-Site Construction</u>: Developers may build the required affordable units at a different location, subject to city approval. The number of required units may be higher if built off-site.
+</div>
+<div class="metric-line">
+  <u>Land Dedication</u>: A developer can dedicate a parcel of land to the city, which can then be used to construct affordable housing.
+</div>
+<div class="metric-line" style="margin-top: 10px;">
+  For example, a project subject to affordability requirements with no listed affordable units may not be a mistake. It could reflect the use of one of these options.
+</div>
+
+
+<div class="block-title"> 2.2 Results</div>
+
+<div class="summary-block">
+   <div class="subblock-title"> 2.2.1 All Projects</div>
+<div class="subsection"> 2.2.1.1 All Units</div>
+<div class="metric-line">• Number of Projects: 2032</div>
+<div class="metric-line">• Total Units: 43678.0</div>
+<div class="metric-line">• Total Affordable Units: 10066.0</div>
+
+<div class="metric-line">• Distribution of Project Types: Single-Family: 89.5% (1819), Multi-Family: 10.2% (208), mixed: 0.2% (5)</div>
+<div class="metric-line">• Minimum Affordable Units: 0.0</div>
+<div class="metric-line">• Maximum Affordable Units: 444.0</div>
+<div class="metric-line">• Mean Affordable Units: 4.95</div>
+<div class="metric-line">• Median Affordable Units: 0.0</div>
+<div class="metric-line">• Average Share of Affordable Units: 28.9%</div>
+<div class="metric-line">• Share of Projects that Include Any Affordable Units: 30.3% (616)</div>
+
+<div class="subsection"> 2.2.1.2  Pre‑Amendment Units</div>
+<div class="metric-line">• Number of Pre‑Amendment Projects: 115</div>
+
+<div class="metric-line">• Total Units: 24605.0</div>
+<div class="metric-line">• Total Affordable Units: 3397.0</div>
+
+
+<div class="metric-line">• Distribution of Project Types (Pre‑Amendment): Multi-Family: 83.5% (96), Single-Family: 16.5% (19)</div>
+
+<div class="subsection"> 2.2.1.3 Post‑Amendment Units</div>
+<div class="metric-line">• Number of Post‑Amendment Projects: 1917</div>
+
+<div class="metric-line">• Total Units: 19073.0</div>
+<div class="metric-line">• Total Affordable Units: 6669.0</div>
+
+<div class="metric-line">• Distribution of Project Types (Post‑Amendment): Single-Family: 93.9% (1800), Multi-Family: 5.8% (112), mixed: 0.3% (5)</div>
+</div>
+
+<div class="summary-block">
+  <div class="subblock-title"> 2.2.2 Projects Subject to Affordability Requirements (Simplified Rule)</div>
+  <div class="metric-line">• Share of All Projects that Are Subject to Affordability Requirements (Simplified Rule): 8.6% (174)</div>
+  <div class="metric-line">• Unit Type Distribution among Projects Subject to Affordability Requirements: Multi-Family: 93.7% (163), Single-Family: 5.7% (10), mixed: 0.6% (1)</div>
+
+  <div class="subsection"> 2.2.2.1 All Projects Subject to Affordability Requirements (Simplified Rule)</div>
+  <div class="metric-line">• Share that Meet the Affordability Requirements: 44.8% (78)</div>
+  <div class="metric-line">• Share that Include Any Affordable Units: 47.1% (82)</div>
+
+  <div class="subsection">  2.2.2.2 Pre-Amendment Projects</div>
+  <div class="metric-line">• Share of Pre-Amendment Projects that Are Subject to Affordability Requirements: 68.7% (79)</div>
+  <div class="metric-line">• Share of Pre-Amendment Projects Subject to Affordability Requirements that Meet the Requirements: 34.2% (27)</div>
+  <div class="metric-line">• Share of Pre-Amendment Projects Subject to Affordability Requirements that Include Any Affordable Units: 36.7% (29)</div>
+
+  <div class="subsection">  2.2.2.3 Post-Amendment Projects</div>
+  <div class="metric-line">• Share of Post-Amendment Projects that Are Subject to Affordability Requirements: 5.0% (95)</div>
+  <div class="metric-line">• Share of Post-Amendment Projects Subject to Affordability Requirements that Meet the Requirements: 53.7% (51)</div>
+  <div class="metric-line">• Share of Post-Amendment Projects Subject to Affordability Requirements that Include Any Affordable Units: 55.8% (53)</div>
+</div>
+
+<div class="summary-block">
+  <div class="subblock-title">2.2.3 Projects Subject to Affordability Requirements (Strict Rule)</div>
+  <div class="metric-line">• Share of Post-Amendment Projects Subject to the Strict Requirements that Meet the Requirements: 25.3% (24)</div>
+</div>
+
+
+<div class="block-title">2.3 Preliminary Analysis</div>
+
+
+<div class="summary-block">
+  <div class="metric-line">Several key patterns emerge from the <strong>data on submissions between 2018 and 2024</strong>.</div>
+
+  <div class="subblock-title"> 2.3.1. Timing of Submissions</div>
+  <div class="metric-line">• The overwhelming majority of projects (1,917 out of 2,032) were submitted after the March 2021 amendment.</div>
+  <div class="metric-line">• Despite this discrepancy, the total number of units submitted is relatively balanced: 24,605 units pre-amendment vs. 19,073 units post-amendment.</div>
+
+  <div class="subblock-title">2.3.2. Project Type Composition</div>
+  <div class="metric-line">• There is a clear difference in project type composition across the two periods.</div>
+  <div class="metric-line">• In the pre-amendment period, 83.5% of projects were multi-family projects, which are typically subject to affordability requirements.</div>
+  <div class="metric-line">• In contrast, only 5.8% of post-amendment projects are multi-family.</div>
+  <div class="metric-line">• This shift explains the large decline in the share of projects subject to affordability requirements: 68.7% pre-amendment, 5.0% post-amendment, and 8.6% overall.</div>
+
+  <div class="subblock-title">2.3.3. Affordable Units</div>
+  <div class="metric-line">• Despite fewer projects being subject to affordability requirements, more affordable units were proposed post-amendment (6,669 units) than pre-amendment (3,397 units).</div>
+  <div class="metric-line">• This is partly because, although multi-family projects made up a smaller share of submissions, their number was actually higher in absolute terms post-amendment (112 vs. 96 projects).</div>
+
+  <div class="subblock-title">2.3.4. Compliance with Affordability Requirements</div>
+  <div class="metric-line">• The share of projects subject to affordability rules that actually met those requirements is higher post-amendment (53.7%) than pre-amendment (34.2%), with an overall compliance rate of 44.8%.</div>
+
+  <div class="subblock-title">2.3.5. Voluntary Provision of Affordable Units is Rare</div>
+  <div class="metric-line">• Nearly all projects that include at least one affordable unit are also subject to affordability requirements.</div>
+  <div class="metric-line">• This suggests that smaller-scale projects rarely include affordable units unless required to do so.</div>
+
+  <div class="metric-line" style="margin-top: 12px;"><strong>It is unlikely that these shifts in project characteristics are related to the amendment, so further investigation is needed.</strong></div>
+</div>
+
+
+<div class="block-title"> 2.4 Further Investigations</div>
+
+
+
+
+<div class="subblock-title"> 2.4.1 Evolution of the Total Number of Projects, Units, and Affordable Units Submitted Over the Years in San José (2018–2024)</div>
+
+
+<!-- Plot 1 -->
+<div class="summary-block" style="text-align: center;">
+  <img src="Visualizations/San_Jose/yearly_submissions_comparison_san_jose.png" alt="San Jose Submissions Over the Years" style="width: 90%; max-width: 1000px;" />
+  <div style="margin-top: 6px;"><strong>Figure 1:</strong> Evolution of the Total Number of Projects, Units, and Affordable Units Submitted Over the Years in San José (2018–2024)</div>
+</div>
+
+
+<div class="subsection">Trends in Project Submissions (Top Row)</div>
+<div class="metric-line">
+  As expected, the first plot shows that the number of projects submitted between 2018 and 2021 was very low compared to the period from 2022 to 2024.<br>
+  The number of submitted projects rises sharply in 2022 and stays high in 2023 and 2024.
+</div>
+<div class="metric-line">
+  An important part of this rise is explained by the reporting of ADUs beginning in 2022 (as seen in the second plot which excludes ADUs).<br>
+  However, the upward trend remains visible even when ADUs are excluded, indicating that the increase is not solely due to ADUs starting to be reported in 2022.<br>
+  It is also clearly driven by an increase in the number of reported single-family project submissions starting in 2022.
+</div>
+<div class="metric-line">
+  This interpretation is further supported by the third plot, which shows that the number of multi-family projects submitted has remained relatively stable between 27 and 35 throughout the entire period.<br>
+  Both improved reporting of ADUs and increased reporting of single-family projects contribute to the sharp rise in total project submissions beginning in 2022.
+</div>
+
+<div class="subsection" style="margin-top: 15px;">Total Units Submitted (middle row)</div>
+<div class="metric-line">
+  The second row of plots shows a different trend compared to the number of submitted projects.<br>
+  The total number of units submitted peaks in 2019, then steadily declines through 2023, followed by a small increase in 2024.<br>
+  This increase may be related to the certification of San José’s Housing Element in January 2024, which set housing targets for 2023–2030.
+</div>
+<div class="metric-line">
+  Removing ADUs and single-family projects (middle and right plots) lowers the number of submitted units in the 2022–2024 period, but does not change the overall trend.<br>
+  This shows that while ADUs and single-family projects represent a large share of the projects submitted, they each contribute relatively few units.<br>
+  Most of the submitted units actually come from multi-family projects.
+</div>
+
+<div class="subsection" style="margin-top: 15px;">Affordable Units (bottom row)</div>
+<div class="metric-line">
+  The third row of plots shows that the number of affordable units submitted has steadily increased since 2018, with a particularly strong jump in 2024.<br>
+  The second plot (excluding ADUs) shows that although some affordable units are delivered through ADU projects, the majority come from multi-family developments.
+</div>
+<div class="metric-line">
+  This confirms that the expansion of affordable housing in San José continues to rely heavily on multi-family construction.
+</div>
+
+<div class="subblock-title">2.4.2  Evolution of the Total Number of Projects, Units, and Affordable Units Submitted Over the Years  by unit type in San José (2018–2024)</div>
+
+<!-- Plot 2 -->
+<div class="summary-block" style="text-align: center;">
+  <img src="Visualizations/San_Jose/yearly_submissions_comparison_by_unit_type_san_jose.png" alt="San José Unit Type Submissions" style="width: 90%; max-width: 1000px;" />
+  <div style="margin-top: 6px;"><strong>Figure 2:</strong> Evolution of the Number of Projects Submitted by Unit Categories Over the Years in San José (2018–2024)</div>
+</div>
+
+
+
+<div class="metric-line">
+  The plot shows a major shift in the composition of reported project types starting in 2022.<br>
+  Starting in 2022, ADUs begin to be reported in large numbers: 575 in 2022, 588 in 2023, and 651 in 2024.<br>
+  This marks a major shift in the types of projects being recorded.<br><br>
+
+  Single-family project reporting (dark red) increases notably in 2023.<br>
+  Fewer than 10 such projects were reported each year prior to 2023, but the number jumps to 76 in 2023 and 73 in 2024.<br>
+  This confirms that the increase in total project submissions beginning in 2022 reflects not only the inclusion of ADUs but also a rise in reported single-family projects starting in 2023.<br><br>
+
+  In contrast, multi-family project submissions (all shades of blue) remain relatively steady throughout the entire period.<br>
+  The combined total of smaller (2–4 units) and larger (5+ units) multi-family structures ranges from roughly 27 to 35 each year, showing no dramatic shifts.<br>
+  However, even small variations in the number of multi-family projects can lead to substantial differences in the total number of units submitted, since a single multi-family development can account for a large number of units.<br><br>
+
+  Together, this breakdown supports the view that the post-2022 spike in reported submissions is driven by both the start of ADU reporting and an increase in reported single-family projects beginning in 2023,<br>
+  while multi-family activity has remained consistent over time.
+</div>
+
+
+<div class="summary-block">
+<div class="subblock-title"> 2.4.3 ADU Reporting and Data Collection Issues </div>
+
+
+<div class="summary-block" style="text-align: center;">
+  <img src="Visualizations/san_jose/adu_submissions_sj_website.png" alt="San José Unit Type Submissions" style="width: 90%; max-width: 1000px;" />
+  <div style="margin-top: 6px;"><strong>Figure 2:</strong> Evolution of the Number of Projects Submitted by Unit Categories Over the Years in San José (2018–2024)</div>
+</div>
+
+
+  <div class="metric-line">
+    A separate graph from the City of San José suggests that ADUs were being submitted well before 2022. The blue bars show
+    <strong>272</strong> in 2018, <strong>418</strong> in 2019, <strong>384</strong> in 2020,
+    and <strong>555</strong> in 2021. This contrasts with the empirical dataset, which shows almost zero ADU submissions before 2022.
+  </div>
+  <div class="metric-line">
+    This suggests that the sharp increase in ADUs starting in 2022 is not due to a sudden rise in ADU submissions, but rather
+    to a shift in reporting practices. The City most likely began including ADUs in APR submissions only in 2022.
+  </div>
+  <div class="metric-line">
+    While the yearly numbers differ slightly across sources, they are of the same order of magnitude, and both datasets show
+    a clear upward trend in ADU activity over time.
+  </div>
+</div>
+
+
+<div class="summary-block">
+  <div class="section-title"> 2.4.4 Additional Evidence from Other Jurisdictions</div>
+  <div class="metric-line">
+    Further evidence can be found in <strong>Appendix Section 5.1</strong>, which shows the same plots of project submissions by unit category for other cities with similar characteristics to San José, such as San Francisco, Santa Clara, and Mountain View.
+  </div>
+  <div class="metric-line">
+    In all of these jurisdictions, <strong>ADU project submissions are reported before 2022</strong>. 
+    This strongly supports the conclusion that the absence of ADUs in San José’s data before 2022 is due to <strong>misreporting or incomplete reporting</strong> in the APR system, not a true lack of ADU activity.
+  </div>
+  <div class="metric-line">
+    We also observe that the <strong>number of single-family project submissions fluctuates significantly</strong> across years in all these cities. 
+    This makes it difficult to draw conclusions about underreporting for single-family projects in San José, even though the pre-2022 numbers appear low.
+  </div>
+</div>
+
+
+
+<div class="summary-block">
+<div class="summary-block">
+<div class="subblock-title"> 2.5 Conclusion of section 2.4 </div>
+
+  <div class="metric-line">
+    The analysis highlights key trends in San José’s housing project submissions from 2018 to 2024.<br>
+    While reporting improvements—especially for ADUs—have significantly influenced recent counts,<br>
+    multi-family projects continue to account for most of the units, particularly affordable ones.<br>
+    Submission patterns in other cities suggest that earlier data gaps in San José are likely due to reporting issues<br>
+    rather than an actual absence of activity.
+  </div>
+</div>
+
+
+
+<div class="main-title"> 3 Empirical Moments Results</div>
+
+<div class="block-title"> 3.1 Datasets</div>
+
+<div class="summary-block">
+  <div class="metric-line"><strong>Dataset Name:</strong> <code>submissions_moments_split_census_san_jose.csv</code></div>
+  <div class="metric-line"><strong>File Location:</strong> Dropbox/Paolo&Co/ZoningEmpirics/04_analysis/zoning/tasks/empirical_moments/san_jose_moments/outputs/Submissions/Datasets/</div>
+
+  <div class="subblock-title">Dataset Scope</div>
+  <div class="metric-line">This dataset covers submissions between 2018 and 2024, split at the census tract level within San José. It includes both annual statistics and aggregate values across all years.</div>
+
+  <div class="subblock-title">Variable Description</div>
+  <div class="metric-line"><u>Geographic and Temporal Identifiers:</u></div>
+  <div class="metric-line">• <code>year</code>: Year of submission (or “All” for cumulative totals)</div>
+  <div class="metric-line">• <code>Census_Tract_Code</code>: FIPS code for the census tract</div>
+  <div class="metric-line">• <code>County_Name</code>, <code>Jurisdiction</code>: These columns always contain “Santa Clara County” and “San José” respectively, as the dataset currently covers only San José.</div>
+  <div class="metric-line">• <code>Proportion_Census_Tract_Covered</code>: Share of the tract area within the jurisdiction</div>
+
+  <div class="metric-line" style="margin-top: 8px;"><u>Submission Counts:</u></div>
+  <div class="metric-line">• <code>projectCount</code>: Total number of projects submitted in the tract and year</div>
+  <div class="metric-line">• <code>projectCount_MF</code>: Number of multi-family  projects</div>
+  <div class="metric-line">• <code>projectCount_SF</code>: Number of single-family  projects</div>
+
+  <div class="metric-line" style="margin-top: 8px;"><u>Empirical Moments (see Empirical Moments document):</u></div>
+  <div class="metric-line">• <code>qMFm</code>, <code>qSFm</code>: Quantity of market-rate units (MF and SF)</div>
+  <div class="metric-line">• <code>qMFa</code>, <code>qSFa</code>: Quantity of affordable units (MF and SF)</div>
+  <div class="metric-line">• <code>shareRentMFm</code>, <code>shareRentSFm</code>, <code>shareRentMFa</code>, <code>shareRentSFa</code>: Share of each category that is renter-occupied</div>
+</div>
+
+
+
+<div class="block-title"> 3.2 Maps</div>
+
+<div class="subblock-title">3.2.1 Affordable Unit Distribution – All Years</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_all.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+  <div style="margin-top: 8px;"><strong>Map 1:</strong> Affordable Unit Distribution Across Census Tracts – All Years</div>
+</div>
+
+<div class="metric-line">
+    Housing units were submitted across nearly all census tracts in San José, but activity is clearly concentrated in the central areas of the city, as indicated by the darker blue census tracts. 
+    Affordable units (red dots) follow a similar pattern: they are distributed throughout the city but tend to be larger and more numerous in the central tracts where the total number of units submitted is the highest.
+  </div>
+
+<div class="subblock-title">3.2.2 Affordable Unit Distribution – 2018</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2018.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+  <div style="margin-top: 8px;"><strong>Map 2:</strong> Affordable Unit Distribution Across Census Tracts – 2018</div>
+</div>
+
+  <div class="metric-line">
+    As expected, many census tracts show no recorded submissions in 2018. 
+    This limited activity reflects the overall low volume of reported projects during the 2018–2021 period, which is largely due to the lack of reported ADUs and single-family projects at the time.
+  </div>
+
+<div class="subblock-title">3.2.3 Affordable Unit Distribution – 2024</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2024.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+  <div style="margin-top: 8px;"><strong>Map 3:</strong> Affordable Unit Distribution Across Census Tracts – 2024</div>
+</div>
+
+<div class="metric-line">
+    In contrast, the 2024 map shows widespread submission activity across the jurisdiction. 
+    This increase is primarily driven by the inclusion of ADUs and single-family projects, which are now consistently reported. 
+    Affordable units appear across many tracts, but most come from small-scale projects, as indicated by the relatively small dot sizes.
+  </div>
+
+<div class="metric-line" style="margin-top:10px;">
+ <strong> You can find the maps for all years in the appendices.</strong> 
+</div>
+
+
+
+<div class="summary-block">
+  <div class="main-title"> 4. Main Findings and Next Steps / Questions</div>
+
+
+<div class="summary-block">
+  <div class="block-title"> 4.1 Main Findings</div>
+
+    <div class="metric-line">• Only <strong>8.6%</strong> of all projects (174 out of 2,032) are subject to affordability requirements under the simplified rule.</div>
+  <div class="metric-line">• Among these, just <strong>44.8%</strong> meet the affordability requirements, and <strong>47.1%</strong> include any affordable units.</div>
+  <div class="metric-line">• Nearly all affordable units are delivered by projects that are subject to affordability requirements—voluntary inclusion is rare.</div>
+
+  <div class="metric-line" style="margin-top: 20px;">• ADU reporting before 2022 was extremely limited in the APR data, despite internal city sources showing hundreds of ADU submissions each year between 2018 and 2021.</div>
+  <div class="metric-line">• This suggests a shift in reporting practices, with ADUs becoming consistently reported starting in 2022.</div>
+
+  <div class="metric-line" style="margin-top: 20px;">• Single-family project reporting was very low before 2023—fewer than 10 per year—but jumped significantly in 2023 and 2024.</div>
+  <div class="metric-line">• Multi-family project submissions remained stable across the 2018–2024 period, ranging from 27 to 35 annually.</div>
+
+  <div class="metric-line" style="margin-top: 20px;">• Despite a decline in the share of projects subject to affordability rules after 2021, more affordable units were submitted post-amendment (6,669) than pre-amendment (3,397).</div>
+  <div class="metric-line">• This is explained by the larger number of multi-family projects in absolute terms in the post-amendment period (112 vs. 96).</div>
+
+
+<div class="metric-line">
+• The maps, based on the empirical moments dataset, show that most projects were concentrated in central San José. 
+Submission activity was limited in 2018, but became widespread by 2024 due to improved reporting of ADUs and single-family projects.
+</div>
+
+
+<div class="summary-block">
+  <div class="block-title"> 4.2 Next Steps / Questions</div>
+
+  <div class="metric-line">• Should we remove ADUs entirely from the dataset for consistency?</div>
+  
+  <div class="metric-line">• Should we keep the units exactly as they appear in the submissions dataset?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;↪ The risk is that we may underestimate the share of affordable units.
+  </div>
+  <div class="metric-line">• Should we apply the "lower bounds" to all projects that do not appear to meet local rules?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;↪ The risk is that we may overestimate affordable units, as some developers could be using exemptions.
+  </div>
+  <div class="metric-line">• Should we assume single-family project data is correctly reported?</div>
+
+  <div class="metric-line">• Will potential issues like underreporting of ADUs and single-family projects create problems for the modeling?</div>
+
+  
+  <div class="metric-line">• Should I try to contact the jurisdiction to ask if they have data on single-family and ADU projects for earlier years?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;↪ Most likely, they will say they don’t have better data it may be worth asking.
+  </div>
+</div>
+
+<div class="main-title">5. Appendices</div>
+
+
+<div class="block-title">5.1 Submissions by unit types over the years for other jurisdictions in Bay Area</div>
+
+  <div class="subblock-title">5.1.1 Bay Area</div>
+
+
+
+
+<div class="summary-block" style="text-align: center;">
+  <img src="Visualizations/bay_area/yearly_submissions_comparison_by_unit_type_bay_area.png" alt="Bay Area Unit Type Submissions" style="width: 90%; max-width: 1000px;" />
+  <div style="margin-top: 6px;"><strong>Figure 4:</strong> Evolution of the Number of Projects Submitted by Unit Categories Over the Years in the Bay Area (2018–2024)</div>
+</div>
+
+  <div class="subblock-title">5.1.2 San Francisco</div>
+
+San Francisco is included here because its population size (approximately 808,000) is similar to that of San José (approximately 983,000).
+
+<div class="summary-block" style="text-align: center;">
+  <img src="Visualizations/san_francisco/yearly_submissions_comparison_by_unit_type_san_francisco.png" alt="San Francisco Submissions Over the Years" style="width: 90%; max-width: 1000px;" />
+  <div style="margin-top: 6px;"><strong>Figure 3:</strong> Evolution of the Total Number of Projects, Units, and Affordable Units Submitted Over the Years in San Francisco (2018–2024)</div>
+</div>
+
+  <div class="subblock-title">5.1.3 Santa Clara</div>
+
+Santa Clara is included here because it is one of the largest neighboring cities to San José, with a population of approximately 130,000.
+
+<div class="summary-block" style="text-align: center;">
+  <img src="Visualizations/santa_clara/yearly_submissions_comparison_by_unit_type_santa_clara.png" alt="Santa Clara Submissions Over the Years" style="width: 90%; max-width: 1000px;" />
+  <div style="margin-top: 6px;"><strong>Figure 3:</strong> Evolution of the Total Number of Projects, Units, and Affordable Units Submitted Over the Years in Santa Clara (2018–2024)</div>
+</div>
+
+
+  <div class="subblock-title">5.1.4 Mountain View</div>
+
+Mountain View is included because, although it has fewer Builder’s Remedy applications than San José in absolute terms, its application count is still high compared to most other cities in the Bay Area.
+
+<div class="summary-block" style="text-align: center;">
+  <img src="Visualizations/mountain_view/yearly_submissions_comparison_by_unit_type_mountain_view.png" alt="Mountain View Submissions Over the Years" style="width: 90%; max-width: 1000px;" />
+  <div style="margin-top: 6px;"><strong>Figure 3:</strong> Evolution of the Total Number of Projects, Units, and Affordable Units Submitted Over the Years in Mountain View (2018–2024)</div>
+</div>
+
+<div class="block-title">5.1 Maps by Year</div>
+
+<div class="subblock-title">5.1.1 All Years</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_all.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+</div>
+
+<div class="subblock-title">4.1.2 Year 2018</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2018.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+</div>
+
+<div class="subblock-title">5.1.3 Year 2019</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2019.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+</div>
+
+<div class="subblock-title">5.1.4 Year 2020</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2020.html"
+          width="100%" height="600px" style="border: 1px solid #ccc;"></iframe>
+</div>
+
+<div class="subblock-title">5.1.5 Year 2021</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2021.html"
+          width="70%%" height="800px" style="border: 1px solid #ccc;"></iframe>
+</div>
+
+<div class="subblock-title">5.1.6 Year 2022</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2022.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+</div>
+
+<div class="subblock-title">5.1.7 Year 2023</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2023.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+</div>
+
+<div class="subblock-title">5.1.8 Year 2024</div>
+<div class="summary-block" style="text-align: center;">
+  <iframe src="Maps/affordable_units_split_census_tracts_2024.html"
+          width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+</div>
+
+
