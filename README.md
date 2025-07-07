@@ -58,4 +58,4 @@ A separate script, `html_doc_creation.ipynb`, then uses the public URLs of the f
 
 ## Source Code Location
 
-The source code for the analysis that produces these outputs is located in the main project directory at:
+The source code for the analysis that produces these outputs is located in the main project directory at:https://github.com/JunbiaoChen1998/zoning/tree/main/tasks/empirical_moments/san_jose_moments/code
